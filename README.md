@@ -1,6 +1,6 @@
 # 我的博客
 
-基于 Hexo 8 + Butterfly 主题，部署在 GitHub Pages 上。
+基于 Hexo 8 + AnZhiYu 主题，部署在 GitHub Pages 上。Butterfly 主题配置保留在 `_config.butterfly.yml`，需要回退时可在 `_config.yml` 改回 `theme: butterfly`。
 
 ## 本地开发
 
@@ -12,27 +12,21 @@ npx hexo clean      # 清理缓存和 public/
 npx hexo generate   # 生成静态文件到 public/
 ```
 
-## 上线前必须改的两处
+## 仓库与站点
 
-1. `_config.yml` 里的 `url`：把 `YOUR_USERNAME` 换成你的 GitHub 用户名。
-   - 仓库名是 `<用户名>.github.io` → `https://<用户名>.github.io`，`root: /`
-   - 仓库名是别的（如 `blog`）→ `https://<用户名>.github.io/blog`，`root: /blog/`
-2. `source/about/index.md` 里的 GitHub 链接和邮箱，以及 `_config.butterfly.yml` 里 `social` 的 GitHub 地址。
+- GitHub 仓库：<https://github.com/Robin0-cpu/r0b1n.github.io>
+- 博客网址：<https://robin0-cpu.github.io/r0b1n.github.io/>
+- Hexo 主题：AnZhiYu；切换主题时 Butterfly 配置保留作回退。
 
-## 发布
-
-先在仓库 **Settings → Pages → Source** 选择 **GitHub Actions**，再推代码：
+## 发布更新
 
 ```bash
-git init
 git add .
-git commit -m "init blog"
-git branch -M main
-git remote add origin https://github.com/<用户名>/<仓库名>.git
-git push -u origin main
+git commit -m "更新博客"
+git push
 ```
 
-等 Actions 跑完即可访问 `https://<用户名>.github.io`。如果先 push 后开 Pages，去 Actions 页面点一次 **Re-run** 即可。
+GitHub Actions 会自动构建并部署。
 
 ## 目录说明
 
@@ -41,5 +35,7 @@ git push -u origin main
 | `source/_posts/` | 文章（Markdown） |
 | `source/about/` | 关于页 |
 | `_config.yml` | 站点配置 |
-| `_config.butterfly.yml` | 主题配置 |
+| `_config.anzhiyu.yml` | AnZhiYu 主题设置 |
+| `_config.butterfly.yml` | Butterfly 回退配置 |
+| `source/css/custom.css` | 自定义配色和样式 |
 | `.github/workflows/pages.yml` | 自动部署 |

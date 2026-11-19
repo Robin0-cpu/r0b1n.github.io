@@ -1,0 +1,100 @@
+# AnZhiYu theme overrides for Robin's blog.
+# The theme defaults are provided by hexo-theme-anzhiyu.
+
+menu:
+  首页: /
+  文章:
+    归档: /archives/
+    分类: /categories/
+    标签: /tags/
+  关于: /about/
+
+social:
+  GitHub: https://github.com/Robin0-cpu || anzhiyu-icon-github
+
+avatar:
+  img: /img/avatar.svg
+  effect: true
+
+favicon: /img/favicon.ico
+index_img: "linear-gradient(135deg, #f7d4e5 0%, #eee2ff 52%, #d9efff 100%)"
+default_top_img: false
+
+post_meta:
+  page:
+    date_type: created
+    date_format: simple
+    categories: true
+    tags: true
+    label: false
+  post:
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+subtitle:
+  enable: true
+  effect: true
+  source: false
+  sub:
+    - 慢慢记录，认真生活。
+    - 把喜欢的二次元与日常写进博客。
+    - 学习、创造，也分享一点灵感。
+
+home_top:
+  enable: true
+  title: 欢迎来到我的小世界
+  subTitle: 记录喜欢的事物与日常灵感
+  siteText: Robin 的博客
+  category: []
+  default_descr: 慢慢记录，认真生活。
+  banner:
+    tips: 二次元 / 日常 / 随笔
+    title: 把喜欢的世界写下来
+    image: /img/avatar.svg
+    link: /about/
+
+article_double_row: true
+
+aside:
+  enable: true
+  card_author:
+    enable: true
+    description: 记录、思考与折腾
+    name_link: /
+  card_announcement:
+    enable: true
+    content: 欢迎来到我的小世界，随便逛逛吧！
+  card_weixin:
+    enable: false
+  card_categories:
+    enable: true
+  card_tags:
+    enable: true
+  card_recent_post:
+    enable: true
+  card_archives:
+    enable: true
+  card_webinfo:
+    enable: true
+
+runtimeshow:
+  enable: false
+
+nav_music:
+  enable: false
+
+universe:
+  enable: false
+
+peoplecanvas:
+  enable: false
+
+post_head_ai_description:
+  enable: false
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/r0b1n.github.io/css/custom.css?v=2">
